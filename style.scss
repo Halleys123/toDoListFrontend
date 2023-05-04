@@ -326,6 +326,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 0.6rem;
+  scale: 1;
   border: 1px solid $white4;
   // box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2);
   opacity: 1;
@@ -411,7 +412,7 @@ body {
   }
   &__pages {
     min-height: 30vh;
-    width: fit-content;
+    width: 200%;
     height: fit-content;
 
     overflow-x: hidden;
@@ -422,7 +423,7 @@ body {
     // margin: ;
     align-self: flex-start;
     &__page {
-      width: 39vw;
+      width: 100%;
       min-height: 100%;
 
       padding-bottom: 1.2rem;
@@ -602,6 +603,7 @@ body {
 
 .hidden {
   opacity: 0;
+  scale: 0;
 }
 .opacityZero {
   opacity: 0;
@@ -636,4 +638,133 @@ body {
 }
 .invalid {
   border: 1px solid red;
+}
+
+@media (max-width: 1080px) {
+  .header {
+    width: 100%;
+  }
+  .signup {
+    width: 50vw;
+  }
+  .container {
+    &__items {
+      grid-template-columns: repeat(auto-fit, minmax(19.8rem, 0.2fr));
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .login {
+    width: 70%;
+    &__welcome {
+      font-size: 1.6rem;
+    }
+    &__div {
+      &__label {
+        font-size: 1.2rem;
+      }
+      &__input {
+        font-size: 1.2rem;
+        width: 100%;
+        height: 2.4rem;
+      }
+    }
+    &__button {
+      font-size: 1.2rem;
+      width: 20%;
+      height: 2.4rem;
+    }
+  }
+  .signup {
+    width: 60vw;
+  }
+  .container {
+    transform: translateY(-0.8rem);
+    &__head {
+      font-size: 2.4rem;
+    }
+    &__items {
+      grid-template-columns: repeat(auto-fit, minmax(17.6rem, 0.2fr));
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    position: relative;
+  }
+  .login {
+    width: 90%;
+    // position: relative;
+    height: 100%;
+    align-self: flex-start;
+    &__welcome {
+      font-size: 1.4rem;
+    }
+    &__div {
+      margin: 0.8rem 0.8rem;
+      &__label {
+        font-size: 1.2rem;
+      }
+      &__input {
+        font-size: 1.2rem;
+        width: 8rem;
+        height: 2.4rem;
+      }
+    }
+    &__user {
+      top: 0.3rem;
+      right: 8rem;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+    }
+    &__pass {
+      bottom: 0.3rem;
+      right: 8rem;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+    }
+    &__button {
+      font-size: 1.2rem;
+      // width: 100%;
+      // height: 100%;
+      // top: 0.3rem;
+      right: -0.2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      // bottom: 0.6rem;
+      position: absolute;
+      // border-radius: 0.8rem;
+      // height: 2.4rem;
+      // margin-left: 0.8rem;
+    }
+  }
+  .signup {
+    width: 80vw;
+  }
+  body {
+    height: fit-content;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .header {
+    height: fit-content;
+    padding: 1.2rem 0rem;
+    overflow-x: hidden;
+  }
+  .container {
+    transform: translateY(0.8rem);
+    width: 95%;
+    height: fit-content;
+    &__head {
+      font-size: 1.8rem;
+    }
+    &__items {
+      padding: 2.4rem 0.8rem;
+      grid-template-columns: repeat(auto-fit, minmax(100%, 0.2fr));
+    }
+  }
 }
