@@ -29,7 +29,7 @@ const addButton = document.querySelector(
 // const pageOneFieldTwo = document.querySelector(".signup__pages__page__inputs__input__field");
 let userName;
 let tasks = [];
-let ip = "https://todolistapi-ssi0.onrender.com";
+let ip = "todolistapi-ssi0.onrender.com";
 // ip = "127.0.0.1:8000";
 class itemModifier {
   constructor(element) {
