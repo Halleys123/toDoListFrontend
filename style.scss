@@ -723,7 +723,7 @@ body {
 @media (max-width: 550px) {
   .container {
     &__items {
-      grid-template-columns: repeat(auto-fit, minmax(12.6rem, 0.5fr));
+      grid-template-columns: repeat(auto-fit, minmax(12.6rem, 1fr));
     }
   }
 }
