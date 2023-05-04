@@ -1,0 +1,19 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "nodemon index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Halleys123/toDoListFrontend.git"
+  },
+  "author": "Arnav Chhabra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Halleys123/toDoListFrontend/issues"
+  },
+  "homepage": "https://github.com/Halleys123/toDoListFrontend#readme"
+}
