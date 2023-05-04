@@ -29,7 +29,7 @@ const addButton = document.querySelector(
 // const pageOneFieldTwo = document.querySelector(".signup__pages__page__inputs__input__field");
 let userName;
 let tasks = [];
-let ip = "192.168.29.122:8000";
+let ip = "https://todolistapi-ssi0.onrender.com";
 // ip = "127.0.0.1:8000";
 class itemModifier {
   constructor(element) {
@@ -47,7 +47,7 @@ class itemModifier {
       this.item.remove();
       tasks = removeArrayElement(tasks, this.itemName.innerHTML);
 
-      fetch(`http://${ip}/user/task/delete`, {
+      fetch(`https://${ip}/user/task/delete`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -366,7 +366,7 @@ document
     });
     val.value = "";
     e.target.disabled = true;
-    fetch(`http://${ip}/user/task/add`, {
+    fetch(`https://${ip}/user/task/add`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -396,7 +396,7 @@ pass.labelClick();
 
 loginButton.addEventListener("click", (e) => {
   if (e.target.getAttribute("title") == "Login") {
-    fetch(`http://${ip}/user/login`, {
+    fetch(`https://${ip}/user/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -467,7 +467,7 @@ signupButtonTwo.addEventListener("click", (e) => {
     if (
       !e.target.classList.contains("signup__pages__pageOne--next--disabled")
     ) {
-      fetch(`http://${ip}/user/signup`, {
+      fetch(`https://${ip}/user/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
