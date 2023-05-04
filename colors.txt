@@ -1,0 +1,33 @@
+$colors: (
+  $white1: #fff,
+  $white2: #f5f5f5,
+  $white3: #e9ecef,
+  $white4: #ced4da,
+  $white5: #868e96,
+  $white6: #adb5bd,
+  $white8: #495057,
+
+  $blue1: #339af0,
+  $blue2: #1c7ed6,
+  $blue3: #1971c2,
+  $blue4: #1864ab,
+  $blue5: #0b48a0,
+ $blue6: #4dabf7,
+
+  $red1: #ddd0cd,
+  $red2: #ff8787,
+  $red3: #ff6b6b,
+  $red4: #fa5252,
+
+  $green1: #d8f5a2,
+  $green2: #05470c,
+  $green3: #94d82d,
+  $green4: #82c91e,
+  $green5: #8ce99a,
+  $green6: #40c057,
+  $green6: #37b24d
+);
+
+
+toDoListMyApp
+IrC8Fmq5rh7voKDu
