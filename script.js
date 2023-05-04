@@ -439,23 +439,47 @@ loginButton.addEventListener("click", (e) => {
     signupForm.classList.toggle("maximize");
   }
 });
+if (window.innerWidth > 600) {
+  loginButton.addEventListener("mouseover", (e) => {
+    if (userInput.value == "") {
+      e.target.childNodes[0].data = "Sign Up";
+      e.target.setAttribute("title", "Sign Up");
+    }
+    if (passInput.value == "") {
+      e.target.childNodes[0].data = "Sign Up";
+      e.target.setAttribute("title", "Sign Up");
+    }
+  });
 
-loginButton.addEventListener("mouseover", (e) => {
-  if (userInput.value == "") {
-    e.target.childNodes[0].data = "Sign Up";
-    e.target.setAttribute("title", "Sign Up");
-  }
-  if (passInput.value == "") {
-    e.target.childNodes[0].data = "Sign Up";
-    e.target.setAttribute("title", "Sign Up");
-  }
-});
+  loginButton.addEventListener("mouseleave", (e) => {
+    e.target.childNodes[0].data = "Login";
+    e.target.setAttribute("title", "Login");
+  });
+}
+if (window.innerWidth < 600) {
+  loginButton.childNodes[0].data = "Sign Up";
+  loginButton.setAttribute("title", "Sign Up");
 
-loginButton.addEventListener("mouseleave", (e) => {
-  e.target.childNodes[0].data = "Login";
-  e.target.setAttribute("title", "Login");
-});
+  userInput.addEventListener("input", () => {
+    if (!passInput.value == "" || !userInput.value == "") {
+      loginButton.childNodes[0].data = "Login";
+      loginButton.setAttribute("title", "Login");
+    } else {
+      loginButton.childNodes[0].data = "Sign Up";
+      loginButton.setAttribute("title", "Sign Up");
+    }
+  });
 
+  passInput.addEventListener("input", () => {
+    if (!userInput.value == "" || !passInput.value == "") {
+      loginButton.childNodes[0].data = "Login";
+      loginButton.setAttribute("title", "Login");
+    } else {
+      loginButton.childNodes[0].data = "Sign Up";
+      loginButton.setAttribute("title", "Sign Up");
+    }
+  });
+}
 signupButtonOne.addEventListener("click", (e) => {
   if (!e.target.classList.contains("signup__pages__pageOne--next--disabled")) {
     document.querySelector(".signup__pages").classList.add("page2");

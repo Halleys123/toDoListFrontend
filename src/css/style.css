@@ -623,49 +623,60 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(17.6rem, 0.2fr));
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 578px) {
   .header {
     position: relative;
   }
-  .login {
-    width: 90%;
-    height: 100%;
-    align-self: flex-start;
+  .login__button {
+    position: absolute;
+    width: 15%;
+    height: 2.4rem;
+    top: 50%;
+    right: 0;
+    transform: translate(0%, -50%);
+  }
+  .login__pass {
+    position: absolute;
+    width: 15%;
+    right: 23%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    margin-top: 0;
+  }
+  .login__user {
+    position: absolute;
+    width: 15%;
+    right: 44%;
+    top: 50%;
+    margin: 0;
+    transform: translate(0%, -50%);
+  }
+}
+@media (max-width: 550px) {
+  .container__items {
+    grid-template-columns: repeat(auto-fit, minmax(12.6rem, 0.5fr));
+  }
+}
+@media (max-width: 425px) {
+  .container__items {
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  }
+  .header {
+    position: relative;
+    padding: 0;
+    width: 100%;
   }
   .login__welcome {
     font-size: 1.4rem;
   }
-  .login__div {
-    margin: 0.8rem 0.8rem;
-  }
   .login__div__label {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
+    position: absolute;
+    left: 0.8rem;
   }
   .login__div__input {
-    font-size: 1.2rem;
-    width: 8rem;
-    height: 2.4rem;
-  }
-  .login__user {
-    top: 0.3rem;
-    right: 8rem;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-  }
-  .login__pass {
-    bottom: 0.3rem;
-    right: 8rem;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-  }
-  .login__button {
-    font-size: 1.2rem;
-    right: -0.2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    position: absolute;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.8rem;
   }
   .signup {
     width: 80vw;
