@@ -17,6 +17,7 @@ const confirmPasswordInput = document.getElementById("confirm__pass");
 const nameInput = document.getElementById("name");
 const usernameInput = document.getElementById("username");
 
+const signUpLabel = document.querySelector(".signup__label");
 const pageOneFields = document.querySelectorAll(
   ".signup__pages__pageOne__inputs__input__field"
 );
@@ -176,6 +177,9 @@ class validateField {
     });
     if (currentCount == totalCount) {
       this.button.classList.remove(this.classToAdd);
+      // signUpLabel.forEach((label) => {
+      //   label.classList.remove("login__div__label--hidden");
+      // });
     } else {
       this.button.classList.add(this.classToAdd);
     }
