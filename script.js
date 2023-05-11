@@ -445,6 +445,7 @@ loginButton.addEventListener("click", (e) => {
 });
 if (window.innerWidth > 600) {
   loginButton.addEventListener("mouseover", (e) => {
+    console.log(e.target.childNodes[0].data);
     if (userInput.value == "") {
       e.target.childNodes[0].data = "Sign Up";
       e.target.setAttribute("title", "Sign Up");
